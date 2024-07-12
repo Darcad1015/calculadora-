@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Calculadora RAWR AP</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="Style_calculadora.css" rel="stylesheet" /> 
+    <script src="Display.js" type="text/javascript"></script>
+    <script src="Operacion.js" type="text/javascript"></script>
+    <script src="Codigo_calculadora.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <div class="display">
+                <div id="valor-anterior"></div>
+                <div id="valor-actual"></div>
+            </div>
+            <button class="col-2" onclick="display.borrartodo()">C</button>
+            <button onclick="display.borrar()">&larr;</button>
+            <button class="operador" value="dividir">/</button>
+            <button class="numero">7</button>
+            <button class="numero">8</button>
+            <button class="numero">9</button>
+            <button class="operador" value="multiplicar">x</button>
+            <button class="numero">4</button>
+            <button class="numero">5</button>
+            <button class="numero">6</button>
+            <button class="operador" value="restar">-</button>
+            <button class="numero">1</button>
+            <button class="numero">2</button>
+            <button class="numero">3</button>
+            <button class="operador" value="sumar">+</button>
+            <button class="numero">0</button>
+            <button class="numero">.</button>
+            <button class="operador" value="igual">=</button>
+            <button id="instruccion">RET</button>
+            <a id="miEnlace" href="../index.html" style="display: none;"></a>
+            <script>
+                const boton = document.getElementById('instruccion');
+                const enlace = document.getElementById('miEnlace');
+                boton.addEventListener('click', () => {
+                    enlace.style.display = 'block';
+                    location.href = enlace.href;
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>
